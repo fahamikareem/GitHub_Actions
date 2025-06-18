@@ -9,5 +9,7 @@ jobs:
               uses: actions/checkout@v4
 
             - name: excecute_ascii script
-              run: ./ascii.sh
-              
+              run: |
+                 chmode +x ascii.sh
+                 ./ascii.sh
+
