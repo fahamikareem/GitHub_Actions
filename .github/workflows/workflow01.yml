@@ -10,6 +10,6 @@ jobs:
 
             - name: excecute_ascii script
               run: |
-                 chmode +x ascii.sh
+                 chmod +x ascii.sh
                  ./ascii.sh
 
