@@ -28,10 +28,10 @@ jobs:
               uses: actions/download-artifact@v4
               with:
                  name: earth-artifact
-                 path: earth.txt
+                 path: ./artifact/earth.txt
 
             - name: read earth.txt
-              run: cat earth.txt
+              run: cat ./artifact/earth.txt
 
 
 
