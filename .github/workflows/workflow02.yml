@@ -6,26 +6,50 @@ jobs:
         runs-on: ubuntu-22.04
         steps:
             - name: Hello-Earth
-              run: echo "Hello-Earth"
+              run: echo "Hello-Earth" >> earth.txt
+
+            - name: upload-earth
+              uses: actions/upload-artifact@v4
+              with:
+                 name: earth-artifact
+                 path: earth.txt
+              
+            - name: read earth.txt
+              run: cat earth.txt
+              
+              
+
+
 
     job-02:
         runs-on: ubuntu-22.04
         needs: job-01
         steps:
             - name: Hellow-World
-              run: echo "Hello-World"
+              run: echo "Hello-World" 
+
+            - name: download earth
+              uses: actions/download-artifact@v4
+              with:
+                 name: download-artifact
+                 path: earth.txt
+
+            - name: read earth.txt
+              run: cat earth.txt
 
 
 
-    job-03:
-        runs-on: ubuntu-22.04
-        needs: job-02
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v4
 
-            - name: run-ascii-script
-              run: |
-                 sudo chmod 777 ascii.sh
-                 ./ascii.sh
+
+    # job-03:
+    #     runs-on: ubuntu-22.04
+    #     needs: job-02
+    #     steps:
+    #         - name: Checkout
+    #           uses: actions/checkout@v4
+
+    #         - name: run-ascii-script
+    #           run: |
+    #              sudo chmod 777 ascii.sh
+    #              ./ascii.sh
 
