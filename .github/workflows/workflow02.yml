@@ -27,4 +27,5 @@ jobs:
             - name: run-ascii-script
               run: |
                  sudo chmod 777 ascii.sh
-                 
+                 ./ascii.sh
+
