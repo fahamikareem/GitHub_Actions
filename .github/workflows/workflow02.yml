@@ -8,7 +8,7 @@ jobs:
             - name: Hello-Earth
               run: echo "Hello-Earth" >> earth.txt
 
-            - name: upload-earth
+            - name: Upload-Artifact-Earth
               uses: actions/upload-artifact@v4
               with:
                  name: earth-artifact
@@ -16,10 +16,6 @@ jobs:
               
             - name: read earth.txt
               run: cat earth.txt
-              
-              
-
-
 
     job-02:
         runs-on: ubuntu-22.04
@@ -28,10 +24,10 @@ jobs:
             - name: Hellow-World
               run: echo "Hello-World" 
 
-            - name: download earth
+            - name: Download-Artifact-Earth
               uses: actions/download-artifact@v4
               with:
-                 name: download-artifact
+                 name: earth-artifact
                  path: earth.txt
 
             - name: read earth.txt
