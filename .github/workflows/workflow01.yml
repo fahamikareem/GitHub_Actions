@@ -8,10 +8,19 @@ jobs:
             - name: checkout 
               uses: actions/checkout@v4
 
+            - name: excecute_ascii script
+              run: |
+                 chmod +x ascii.sh
+                 ./ascii.sh
+
+    job02:
+        runs-on: ubuntu-22.04
+        needs: job01
+        steps:           
             - name: multiple commands
               run: |
                  ls
-                 pwd
+                 pwd           
             
 
             - name: excecute_ascii script
