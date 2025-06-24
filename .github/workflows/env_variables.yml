@@ -9,4 +9,4 @@ jobs:
         runs-on: ubuntu-22.04
         steps:
             - name: whoami
-              run: echo " I am $myname and $mycontry is my country"
+              run: echo " I am $myname and $mycountry is my country"
