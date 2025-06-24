@@ -42,10 +42,10 @@ jobs:
     #     needs: job-02
     #     steps:
     #         - name: Checkout
-    #           uses: actions/checkout@v4
+    #             uses: actions/checkout@v4
 
     #         - name: run-ascii-script
-    #           run: |
-    #              sudo chmod 777 ascii.sh
-    #              ./ascii.sh
+    #             run: |
+    #                 sudo chmod 777 ascii.sh
+    #                 ./ascii.sh
 

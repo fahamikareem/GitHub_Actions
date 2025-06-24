@@ -1,0 +1,12 @@
+name: EnvVariables
+on: push
+env: 
+    myname: fahami
+    mycountry: India
+
+jobs:
+    job_env_01:
+        runs-on: ubuntu-latest
+        steps:
+            - name: whoami
+              run: echo " I am $myname and $mycontry is my country"
