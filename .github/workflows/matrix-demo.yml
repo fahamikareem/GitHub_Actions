@@ -1,0 +1,15 @@
+name: Matix-Demo
+on:
+    push: 
+    workflow_dispatch: 
+
+jobs:
+    job-01:
+        strategy:
+            matrix:
+                runner-os: [ubuntu-22.04, ubuntu-20.4]
+                myname: [fahami, fahamikareem]
+        runs-on: ${{ matrix.runner-os }}
+        steps:
+            - name: matrix-testing
+              run: my name is ${{ matrix.myname }}
