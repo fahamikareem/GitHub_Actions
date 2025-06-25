@@ -12,4 +12,4 @@ jobs:
         runs-on: ${{ matrix.runner-os }}
         steps:
             - name: matrix-testing
-              run: my name is ${{ matrix.myname }}
+              run: echo "my name is ${{ matrix.myname }}"
