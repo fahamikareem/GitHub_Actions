@@ -1,5 +1,7 @@
 name: EnvVariables
-on: push
+on:
+    # push
+    workflow_dispatch: 
 env: 
     myname: fahami
     mycountry: India
